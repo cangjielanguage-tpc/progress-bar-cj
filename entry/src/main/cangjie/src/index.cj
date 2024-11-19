@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
+ */
+
 package ohos_app_cangjie_entry
 
 internal import ohos.base.LengthProp
@@ -15,6 +19,11 @@ import ohos.state_macro_manage.Entry
 import ohos.state_macro_manage.Component
 import ohos.state_macro_manage.State
 import ohos.state_macro_manage.r
+internal import ohos.router.*
+import ohos.base.*
+import ohos.component.*
+import ohos.state_manage.*
+import ohos.state_macro_manage.*
 
 @Entry
 @Component
@@ -24,9 +33,18 @@ class MyView {
     func build() {
         Row {
             Column {
-                Button(message).onClick {
-                    evt => AppLog.info("Hello Cangjie")
-                }.fontSize(40).height(80)
+                Button("DeterminateCircularSample").fontSize(14).onClick {
+                    => Router.push(url: "DeterminateCircularSample")
+                }
+                Button("MaterialProgressBarSample").fontSize(14).onClick {
+                    => Router.push(url: "MaterialProgressBarSample")
+                }
+                Button("modelInitPage").fontSize(14).onClick {
+                    => Router.push(url: "modelInitPage")
+                }
+                Button("SmoothProgressBarSample").fontSize(14).onClick {
+                    => Router.push(url: "SmoothProgressBarSample")
+                }
             }.width(100.percent)
         }.height(100.percent)
     }
