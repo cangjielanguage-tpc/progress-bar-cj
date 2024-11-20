@@ -39,8 +39,8 @@ class MyView {
                 Button("MaterialProgressBarSample").fontSize(14).onClick {
                     => Router.push(url: "MaterialProgressBarSample")
                 }
-                Button("modelInitPage").fontSize(14).onClick {
-                    => Router.push(url: "modelInitPage")
+                Button("ModelInitPage").fontSize(14).onClick {
+                    => Router.push(url: "ModelInitPage")
                 }
                 Button("SmoothProgressBarSample").fontSize(14).onClick {
                     => Router.push(url: "SmoothProgressBarSample")

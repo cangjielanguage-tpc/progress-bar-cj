@@ -59,7 +59,7 @@ public class MaterialModel {
         this.secondColor = secondColor
     }
 
-    public func getSecondColor(): UInt32 {
+    func getSecondColor(): UInt32 {
         return this.secondColor
     }
 
@@ -67,7 +67,7 @@ public class MaterialModel {
         this.bgColor = bgColor
     }
 
-    public func getBgColor(): UInt32 {
+    func getBgColor(): UInt32 {
         return this.bgColor
     }
 
@@ -79,7 +79,7 @@ public class MaterialModel {
         }
     }
 
-    public func getShowProgressBackground(): Bool {
+    func getShowProgressBackground(): Bool {
         return this.bgColor == 0
     }
 
@@ -87,21 +87,21 @@ public class MaterialModel {
         this.color = color
     }
 
-    public func getColor(): UInt32 {
+    func getColor(): UInt32 {
         return this.color
     }
     public func setColors(colors: Array<UInt32>): Unit {
         this.colors = colors
     }
 
-    public func getColors(): Array<UInt32> {
+    func getColors(): Array<UInt32> {
         return this.colors
     }
     public func setIndeterminate(indeterminate: Bool): Unit {
         this.indeterminate = indeterminate
     }
 
-    public func getIndeterminate(): Bool {
+    func getIndeterminate(): Bool {
         return this.indeterminate
     }
 
@@ -109,7 +109,7 @@ public class MaterialModel {
         this.indeterminateAngle = indeterminateAngle
     }
 
-    public func getIndeterminateAngle(): Bool {
+    func getIndeterminateAngle(): Bool {
         return this.indeterminateAngle
     }
 
@@ -117,7 +117,7 @@ public class MaterialModel {
         this.style = style
     }
 
-    public func getStyle(): MaterialProgressStyle {
+    func getStyle(): MaterialProgressStyle {
         return this.style
     }
 
@@ -125,7 +125,7 @@ public class MaterialModel {
         this.progress = progress
     }
 
-    public func getProgress(): Float64 {
+    func getProgress(): Float64 {
         return this.progress
     }
 
@@ -133,7 +133,7 @@ public class MaterialModel {
         this.angle = angle
     }
 
-    public func getAngle(): Float64 {
+    func getAngle(): Float64 {
         return this.angle
     }
 
@@ -141,7 +141,7 @@ public class MaterialModel {
         this.radius = radius
     }
 
-    public func getRadius(): Float64 {
+    func getRadius(): Float64 {
         return this.radius
     }
 
@@ -149,7 +149,7 @@ public class MaterialModel {
         this.progressSecond = progressSecond
     }
 
-    public func getSecondProgress(): Float64 {
+    func getSecondProgress(): Float64 {
         return this.progressSecond
     }
 
@@ -157,7 +157,7 @@ public class MaterialModel {
         this.strokeWidth = strokeWidth
     }
 
-    public func getStrokeWidth(): Float64 {
+    func getStrokeWidth(): Float64 {
         return this.strokeWidth
     }
 
@@ -165,7 +165,7 @@ public class MaterialModel {
         this.curve = curve
     }
 
-    public func getCurve(): Curve {
+    func getCurve(): Curve {
         return this.curve
     }
 
@@ -181,7 +181,7 @@ public class MaterialModel {
         this.isReversed = isReversed
     }
 
-    public func getIsReversed(): Bool {
+    func getIsReversed(): Bool {
         return this.isReversed
     }
 
@@ -189,7 +189,7 @@ public class MaterialModel {
         this.isMirror = isMirror
     }
 
-    public func getIsMirror(): Bool {
+    func getIsMirror(): Bool {
         return this.isMirror
     }
 
@@ -197,7 +197,7 @@ public class MaterialModel {
         this.isGradients = isGradients
     }
 
-    public func getIsGradients(): Bool {
+    func getIsGradients(): Bool {
         return this.isGradients
     }
 
@@ -205,7 +205,7 @@ public class MaterialModel {
         this.speed = speed
     }
 
-    public func GetSpeed(): Float64 {
+    func getSpeed(): Float64 {
         return this.speed
     }
 
@@ -213,7 +213,7 @@ public class MaterialModel {
         this.separatorLength = separatorLength
     }
 
-    public func GetSeparatorLength(): Float64 {
+    func getSeparatorLength(): Float64 {
         return this.separatorLength
     }
 
@@ -221,7 +221,7 @@ public class MaterialModel {
         this.sectionsCount = sectionsCount
     }
 
-    public func GetSectionsCount(): Int64 {
+    func getSectionsCount(): Int64 {
         return this.sectionsCount
     }
 
@@ -229,7 +229,7 @@ public class MaterialModel {
         this.isStop = isStop
     }
 
-    public func getIsStop(): Bool {
+    func getIsStop(): Bool {
         return this.isStop
     }
 }
