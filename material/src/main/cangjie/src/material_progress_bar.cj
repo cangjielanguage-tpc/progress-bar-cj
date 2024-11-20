@@ -22,9 +22,9 @@ public class MaterialProgressBar {
         } else if (this.style == MaterialProgressStyle.MaterialHorizontal) {
             MaterialComponent(modelBuild: this.modelBuild)
         } else if (this.style == MaterialProgressStyle.SmoothCircular) {
-        //            SmoothCircularProgressBar(modelBuild: this.modelBuild)
+            SmoothCircularProgressBar(modelBuild: this.modelBuild)
         } else if (this.style == MaterialProgressStyle.SmoothHorizontal) {
-        //            SmoothHorizontalProgressBar(modelBuild: this.modelBuild)
+            SmoothHorizontalProgressBar(modelBuild: this.modelBuild)
         } else {
             Text("undefined").fontSize(30)
         }
