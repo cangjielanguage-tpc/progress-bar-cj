@@ -287,7 +287,7 @@ public class ComMaterialModel {
         this.circleRadius = circleRadius
     }
 
-    public func getCircleRadius(): Float64 {
+    func getCircleRadius(): Float64 {
         return this.circleRadius
     }
 
@@ -295,7 +295,7 @@ public class ComMaterialModel {
         this.barColor = barColor
     }
 
-    public func getBarColor(): UInt32 {
+     func getBarColor(): UInt32 {
         return this.barColor
     }
 
@@ -303,7 +303,7 @@ public class ComMaterialModel {
         this.rimColor = rimColor
     }
 
-    public func getRimColor(): UInt32 {
+     func getRimColor(): UInt32 {
         return this.rimColor
     }
 
@@ -311,7 +311,7 @@ public class ComMaterialModel {
         this.rimWidth = rimWidth
     }
 
-    public func getRimWidth(): Float64 {
+    func getRimWidth(): Float64 {
         return this.rimWidth
     }
 
@@ -319,7 +319,7 @@ public class ComMaterialModel {
         this.barWidth = barWidth
     }
 
-    public func getBarWidth(): Float64 {
+    func getBarWidth(): Float64 {
         return this.barWidth
     }
 
@@ -337,7 +337,7 @@ public class ComMaterialModel {
         this.mTargetProgress = tempTargetProgress
     }
     // 获取当前的进度值
-    public func getProgress(): String {
+    func getProgress(): String {
         return this.mProgress
     }
 
@@ -353,7 +353,7 @@ public class ComMaterialModel {
         this.spinSpeed = spinSpeed
     }
 
-    public func getSpinSpeed(): Float64 {
+    func getSpinSpeed(): Float64 {
         return this.spinSpeed
     }
 
