@@ -33,6 +33,9 @@ class MyView {
     func build() {
         Row {
             Column {
+                Button("HLT_L0").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"Index_L0")})
+                Button("HLT_L1").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"Index_L1")})
+
                 Button("DeterminateCircularSample").fontSize(14).onClick {
                     => Router.push(url: "DeterminateCircularSample")
                 }

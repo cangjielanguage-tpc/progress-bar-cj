@@ -63,6 +63,7 @@ public class MaterialComponent {
         if (this.modelBuild.indeterminateAngle) {
             this.modelBuild.angle = Float64((Int64(this.modelBuild.angle) + 5) % 360)
             this.angle = this.modelBuild.angle
+            this.progress = this.modelBuild.progress
             if (this.modelBuild.indeterminate) {
                 if (this.isAddProgress) {
                     this.modelBuild.progress = min(100.0, this.modelBuild.progress + 2.0)

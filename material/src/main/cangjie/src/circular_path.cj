@@ -13,6 +13,7 @@ public class CircularPath <: ProgressBar {
     private var pathCmd: String = ""
     var progress: Float64 = 0.0
     var color: UInt32 = 0
+    var colorSecond: Int64 = -1
     var maxProgress: Float64 = 100.0
     private var isReset: Bool = true
 
@@ -27,6 +28,10 @@ public class CircularPath <: ProgressBar {
 
     func setColor(color: UInt32): CircularPath {
         this.color = color
+        return this
+    }
+    func setColorSecond(colorSecond: Int64): CircularPath {
+        this.colorSecond = colorSecond
         return this
     }
 

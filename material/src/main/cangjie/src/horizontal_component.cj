@@ -14,9 +14,9 @@ public class HorizontalComponent {
     private var mHeight: Float64 = 0.0
     var strokeWidth: Float64 = 6.0
     private var progressMax: Float64 = 100.0
-    var bgColor: UInt32 = 0
+    var bgColor: Int64 = -1
     var color: UInt32 = 0x007DFF
-    var secondColor: UInt32 = 0
+    var secondColor: Int64 = -1
     @Link
     var progressSecond: Float64 = 0.0
     @Link
@@ -50,7 +50,7 @@ public class HorizontalComponent {
         this.progressBar = hPath
         this.progressPathCmd = this.progressBar.getPathCmd()
 
-        if (this.bgColor != 0) {
+        if (this.bgColor >= 0) {
             var bgPath: HorizontalPath = HorizontalPath()
             bgPath.setMaxProgress(this.progressMax)
             bgPath.setBarColor(this.color)
@@ -61,7 +61,7 @@ public class HorizontalComponent {
             this.bgPathCmd = this.bgBar.getPathCmd()
         }
 
-        if (this.secondColor != 0) {
+        if (this.secondColor >= 0) {
             var secondPath: HorizontalPath = HorizontalPath()
             secondPath.setMaxProgress(this.progressMax)
             secondPath.setBarColor(this.color)
@@ -76,11 +76,12 @@ public class HorizontalComponent {
     func build() {
         Column {
             Shape() {
-                if (this.bgColor != 0) {
-                    Path().commands(this.bgPathCmd).stroke(this.bgColor).strokeWidth(this.strokeWidth)
+                if (this.bgColor >= 0) {
+                    Path().commands(this.bgPathCmd).stroke(UInt32(this.bgColor)).strokeWidth(this.strokeWidth)
                 }
-                if (this.secondColor != 0) {
-                    Path().commands(this.secondProgressPathCmd).stroke(this.secondColor).strokeWidth(this.strokeWidth)
+                if (this.secondColor >= 0) {
+                    Path().commands(this.secondProgressPathCmd).stroke(UInt32(this.secondColor)).strokeWidth(
+                        this.strokeWidth)
                 }
                 Path().commands(this.progressPathCmd).stroke(this.color).strokeWidth(this.strokeWidth)
             }.width(100.percent).height(this.mHeight)
