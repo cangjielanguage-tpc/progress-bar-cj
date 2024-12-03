@@ -44,9 +44,9 @@ public class MaterialModel {
     var indeterminate: Bool = false
     var radius: Float64 = 50.0
     var color: UInt32 = 0x007DFF //0x029789
-    var secondColor: UInt32 = 0
+    var secondColor: Int64 = -1
     var progressSecond: Float64 = 0.0
-    var bgColor: UInt32 = 0
+    var bgColor: Int64 = -1
     var strokeWidth: Float64 = 8.0
     var isPocket: Bool = false
     var colors: Array<UInt32> = [0x3E802F, 0xF4B400, 0x427FED, 0xB23424]
@@ -55,19 +55,19 @@ public class MaterialModel {
     var sectionsCount: Int64 = 0
     var curve: Curve = Curve.Linear
 
-    public func setSecondColor(secondColor: UInt32): Unit {
+    public func setSecondColor(secondColor: Int64): Unit {
         this.secondColor = secondColor
     }
 
-    func getSecondColor(): UInt32 {
+    func getSecondColor(): Int64 {
         return this.secondColor
     }
 
-    public func setBgColor(bgColor: UInt32): Unit {
+    public func setBgColor(bgColor: Int64): Unit {
         this.bgColor = bgColor
     }
 
-    func getBgColor(): UInt32 {
+    func getBgColor(): Int64 {
         return this.bgColor
     }
 
@@ -75,12 +75,12 @@ public class MaterialModel {
         if (isShow) {
             this.bgColor = 0xd0d0d0
         } else {
-            this.bgColor = 0
+            this.bgColor = -1
         }
     }
 
     func getShowProgressBackground(): Bool {
-        return this.bgColor == 0
+        return this.bgColor == -1
     }
 
     public func setColor(color: UInt32): Unit {

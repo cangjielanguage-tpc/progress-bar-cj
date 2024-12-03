@@ -16,7 +16,7 @@ public class CircularComponent {
     var progressPathCmd: String = ""
     @State
     var bgPathCmd: String = ""
-    var bgColor: UInt32 = 0
+    var bgColor: Int64 = -1
     @Link
     var color: UInt32 = 0x007DFF
     var mWidth: Float64 = 0.0
@@ -24,7 +24,7 @@ public class CircularComponent {
     private var progressMax: Float64 = 100.0
     var radius: Float64 = 45.0
     var strokeWidth: Float64 = 0.0
-    var secondColor: UInt32 = 0
+    var secondColor: Int64 = -1
     @State
     var progressSecondPathCmd: String = ""
     private var secondCircularBar: CircularPath = CircularPath()
@@ -41,7 +41,7 @@ public class CircularComponent {
             this.circularBar.setProgress(this.progress)
             this.circularBar.setAngle(this.angle)
             this.progressPathCmd = this.circularBar.getPathCmd()
-            if (this.secondColor != 0) {
+            if (this.secondColor >= 0) {
                 this.secondCircularBar.setProgress(this.progressSecond)
                 this.secondCircularBar.setAngle(this.angle)
                 this.progressSecondPathCmd = this.secondCircularBar.getPathCmd()
@@ -62,20 +62,20 @@ public class CircularComponent {
 
         this.circularBar = barPath
         this.progressPathCmd = this.circularBar.getPathCmd()
-        if (this.secondColor != 0) {
+        if (this.secondColor >= 0) {
             var secondPath: CircularPath = CircularPath()
             secondPath.setStrokeWidth(this.strokeWidth)
             secondPath.setRadius(this.radius)
             secondPath.setMaxProgress(this.progressMax)
             secondPath.setProgress(this.progressSecond)
-            secondPath.setColor(this.secondColor)
+            secondPath.setColorSecond(this.secondColor)
             secondPath.setAngle(this.angle)
 
             this.secondCircularBar = secondPath
             this.progressSecondPathCmd = this.secondCircularBar.getPathCmd()
         }
 
-        if (this.bgColor != 0) {
+        if (this.bgColor >= 0) {
             var bgPath: CircularPath = CircularPath()
             bgPath.setStrokeWidth(this.strokeWidth)
             bgPath.setRadius(this.radius)
@@ -88,12 +88,12 @@ public class CircularComponent {
     func build() {
         Column {
             Stack(Alignment.TopStart) {
-                if (this.bgColor != 0) {
-                    Path().commands(this.bgPathCmd).stroke(this.bgColor).strokeWidth(this.strokeWidth).fillOpacity(0).
+                if (this.bgColor >= 0) {
+                    Path().commands(this.bgPathCmd).stroke(UInt32(this.bgColor)).strokeWidth(this.strokeWidth).fillOpacity(0).
                         strokeLineCap(LineCapStyle.Round)
                 }
-                if (this.secondColor != 0) {
-                    Path().commands(this.progressSecondPathCmd).stroke(this.secondColor).strokeWidth(this.strokeWidth).
+                if (this.secondColor >= 0) {
+                    Path().commands(this.progressSecondPathCmd).stroke(UInt32(this.secondColor)).strokeWidth(this.strokeWidth).
                         fillOpacity(0).strokeLineCap(LineCapStyle.Round)
                 }
                 Path().commands(this.progressPathCmd).stroke(this.color).strokeWidth(this.strokeWidth).fillOpacity(0).
