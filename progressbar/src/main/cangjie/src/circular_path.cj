@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 public class CircularPath <: ProgressBar {
     private var startPoint: Array<Float64> = [0.0, 0.0]

@@ -2,16 +2,17 @@
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
 
-package material
+package ohos_app_cangjie_entry.pages.hlt_new
 
 internal import ohos.base.*
 internal import ohos.component.*
 internal import ohos.state_manage.*
-import ohos.state_macro_manage.*
-internal import ohos.ability.Ability
-internal import ohos.ability.Want
-internal import ohos.ability.LaunchParam
-internal import ohos.window.WindowStage
+internal import ohos.router.*
+internal import ohos.ability.*
+internal import ohos.window.*
+internal import cj_res_entry.app
+internal import material.*
+internal import ohos.resource_manager.*
 internal import ohos.ability.AbilityStage
 internal import ohos.ability.LaunchReason
 internal import ohos.prompt_action.*
@@ -26,15 +27,11 @@ internal import std.time.*
 internal import ohos.hilog.*
 internal import ohos.prompt_action.*
 internal import std.format.*
-internal import ohos.hilog.*
 internal import ohos.concurrency.*
+internal import ohos_app_cangjie_entry.*
 
 extend<T> Option<T> {
     operator func ()(): T {
         this.getOrThrow()
     }
-}
-
-func pxToVp(pxFloat64: Float64): Float64 {
-    return px2vp(pxFloat64.px)().value
 }

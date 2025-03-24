@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 public class HorizontalPath <: ProgressBar {
     private var startPoint: Array<Float64> = [0.0, 0.0]
@@ -23,8 +23,8 @@ public class HorizontalPath <: ProgressBar {
             return ""
         }
 
-        let x: Float64 = vp2px(Length(point[0]))().value
-        let y: Float64 = vp2px(Length(point[1]))().value
+        let x: Float64 = point[0]
+        let y: Float64 = point[1]
 
         return x.toString() + " " + y.toString()
     }

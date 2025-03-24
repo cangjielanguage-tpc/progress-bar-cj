@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 import ohos.base.*
 import ohos.component.*
@@ -111,7 +111,8 @@ public class MaterialComponent {
                         color: this.modelBuild.color,
                         secondColor: this.modelBuild.secondColor,
                         bgColor: this.modelBuild.bgColor,
-                        strokeWidth: this.modelBuild.strokeWidth
+                        strokeWidth: this.modelBuild.strokeWidth,
+                        horizontalLength: this.modelBuild.horizontalLength
                     )
                 }
             }
@@ -134,7 +135,8 @@ public class MaterialComponent {
                         secondColor: this.modelBuild.secondColor,
                         bgColor: this.modelBuild.bgColor,
                         strokeWidth: this.modelBuild.strokeWidth,
-                        mOffset: 0.0
+                        mOffset: 0.0,
+                        horizontalLength: this.modelBuild.horizontalLength
                     )
                 }
             }

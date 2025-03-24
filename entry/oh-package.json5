@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "material": "file:../material"
+    "progressbar": "file:../progressbar"
   }
 }
 

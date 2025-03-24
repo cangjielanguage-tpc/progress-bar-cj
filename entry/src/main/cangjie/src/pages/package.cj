@@ -11,7 +11,7 @@ internal import ohos.router.*
 internal import ohos.ability.*
 internal import ohos.window.*
 internal import cj_res_entry.app
-internal import material.*
+internal import progressbar.*
 internal import ohos.resource_manager.*
 internal import ohos.ability.AbilityStage
 internal import ohos.ability.LaunchReason
