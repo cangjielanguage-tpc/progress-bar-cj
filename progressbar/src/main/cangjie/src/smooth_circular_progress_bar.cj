@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 import ohos.base.*
 import ohos.component.*
@@ -69,7 +69,12 @@ public class SmoothCircularProgressBar {
             }
         )
 
-        this.progress = this.progressInit
+        this.progress = this.modelBuild.progressInit
+        this.spinSpeed = this.modelBuild.speed
+        this.angle = this.modelBuild.angle
+        if (this.modelBuild.colors.size != 0) {
+            this.barColors = this.modelBuild.colors
+        }
     }
 
     protected override func aboutToDisappear() {

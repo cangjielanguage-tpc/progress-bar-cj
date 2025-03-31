@@ -1,5 +1,5 @@
 <div align="center">
-<h1>materialProgressBar4cj</h1>
+<h1>progress-bar-cj</h1>
 </div>
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 ## 介绍 
 
-materialProgressBar4cj 是一个自定义ProgressBar效果，包含进度轮和水平柱两种效果。它是一个用仓颉语言编写的适用于鸿蒙系统的三方库。
+progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平柱两种效果。它是一个用仓颉语言编写的适用于鸿蒙系统的三方库。
 
 <p align="left">
 <img src="./doc/assets/material_gif_demo.gif"  width="30%">
@@ -31,14 +31,14 @@ materialProgressBar4cj 是一个自定义ProgressBar效果，包含进度轮和�
 ├─AppScope
 ├─doc            # API文档和使用手册存放目录                   
 ├─entry          # 示例代码文件夹                  
-├─material # material 库源目录                  
+├─progressbar # progressbar 库源目录                  
 │  └─src
 │      └─main
 │          ├─cangjie
 │          │  └─src              # 核心实现功能代码                       
 │          └─resources
 ├─hvigor     # 构建工具目录
-├─README.md  # materialProgressBar4cj 介绍及使用说明
+├─README.md  # progress-bar-cj 介绍及使用说明
 ```
 ## 接口说明
 
@@ -48,9 +48,9 @@ materialProgressBar4cj 是一个自定义ProgressBar效果，包含进度轮和�
 
 1. 通过 module 引入
     1. 克隆下载项目
-    2. 将 material 模块拷贝到应用项目下
-    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "material": "file:../material"
-      ```json
+    2. 将 progressbar 模块拷贝到应用项目下
+    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "progressbar": "file:../progressbar"
+    ```json
       {
          "name": "entry",
          "version": "1.0.0",
@@ -59,37 +59,41 @@ materialProgressBar4cj 是一个自定义ProgressBar效果，包含进度轮和�
          "author": "",
          "license": "",
         "dependencies": {
-            "material": "file:../material"
+            "progressbar": "file:../progressbar"
         }
       }
-      ```
-    4. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，在 [dependencies] 字段下添加 material = {path = "../../../../material/src/main/cangjie", version = "1.0.0"}
-       ```toml
+    ```
+    4. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，在 [dependencies] 字段下添加 progressbar = {path = "../../../../progressbar/src/main/cangjie", version = "1.0.0"}
+    ```toml
        [dependencies]
-           material = {path = "../../../../material/src/main/cangjie", version = "1.0.0"}
-       ```
-    5. 在项目中使用 import material.* 引用 material 项目
-       ```cangjie
-       import material.*
-       ```
-2. 把 materialProgressBar4cj 作为三方库依赖引入
-    1. 目标工程把 materialProgressBar4cj 依赖库作为 git submodule 引入
+           [dependencies.progressbar]
+               path = "../../../../progressbar/src/main/cangjie"
+               version = "1.0.0"
+    ```
+    5. 在项目中使用 import progressbar.* 引用 progressbar 项目
+    ```cangjie
+       import progressbar.*
+    ```
+2. 把 progress-bar-cj 作为三方库依赖引入
+    1. 目标工程把 progress-bar-cj 依赖库作为 git submodule 引入
 
     ```
-    > cd $工程根目录
-    > mkdir third-party
-    > cd third-party
-    > git submodule add "https://gitcode.com/Cangjie-TPC/materialProgressBar4cj.git"
+       > cd $工程根目录
+       > mkdir third-party
+       > cd third-party
+       > git submodule add "https://gitcode.com/Cangjie-TPC/progress-bar-cj.git"
     ```
     2. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，添加依赖
     ```toml
     [dependencies]
-        material = {path = "../../../../third-party/materialProgressBar4cj/material/src/main/cangjie", version = "1.0.0"}
-     ```
-    3. 在项目中使用 material 组件
-       ```cangjie
-       import material.*
-       ```
+        [dependencies.progressbar]
+            path = "../../../../third-party/progress-bar-cj/progressbar/src/main/cangjie"
+            version = "1.0.0"
+    ```
+    3. 在项目中使用 progressbar 组件
+    ```cangjie
+       import progressbar.*
+    ```
 
 ## 功能示例
 
@@ -98,7 +102,7 @@ materialProgressBar4cj 是一个自定义ProgressBar效果，包含进度轮和�
 #### 高亮引导组件示例
 
 ```cangjie
-import material.*       //导入依赖
+import progressbar.*       //导入依赖
 import ohos.router.*
 import ohos.base.*
 import ohos.component.*

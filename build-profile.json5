@@ -37,8 +37,8 @@
         }
       ]
     },    {
-      "name": "material",
-      "srcPath": "./material"
+      "name": "progressbar",
+      "srcPath": "./progressbar"
     }
   ]
 }

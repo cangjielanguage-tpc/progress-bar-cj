@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 import ohos.state_macro_manage.*
 import ohos.concurrency.*
@@ -13,6 +13,7 @@ public class HorizontalComponent {
     private var secondBar: HorizontalPath = HorizontalPath()
     private var mHeight: Float64 = 0.0
     var strokeWidth: Float64 = 6.0
+    var horizontalLength: Float64 = 1000.0
     private var progressMax: Float64 = 100.0
     var bgColor: Int64 = -1
     var color: UInt32 = 0x007DFF
@@ -44,8 +45,9 @@ public class HorizontalComponent {
         var hPath = HorizontalPath()
         hPath.setMaxProgress(this.progressMax)
         hPath.setBarColor(this.color)
+        hPath.setTotalWidth(this.horizontalLength)
         hPath.setProgress(this.progress)
-        hPath.setTotalWidth(1000.0)
+
 
         this.progressBar = hPath
         this.progressPathCmd = this.progressBar.getPathCmd()
@@ -54,8 +56,8 @@ public class HorizontalComponent {
             var bgPath: HorizontalPath = HorizontalPath()
             bgPath.setMaxProgress(this.progressMax)
             bgPath.setBarColor(this.color)
+            bgPath.setTotalWidth(this.horizontalLength)
             bgPath.setProgress(this.progressMax)
-            bgPath.setTotalWidth(1000.0)
 
             this.bgBar = bgPath
             this.bgPathCmd = this.bgBar.getPathCmd()
@@ -65,8 +67,8 @@ public class HorizontalComponent {
             var secondPath: HorizontalPath = HorizontalPath()
             secondPath.setMaxProgress(this.progressMax)
             secondPath.setBarColor(this.color)
+            secondPath.setTotalWidth(this.horizontalLength)
             secondPath.setProgress(this.progressSecond)
-            secondPath.setTotalWidth(1000.0)
 
             this.secondBar = secondPath
             this.secondProgressPathCmd = this.secondBar.getPathCmd()

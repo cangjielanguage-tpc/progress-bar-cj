@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 import ohos.state_macro_manage.*
 import ohos.concurrency.*
@@ -10,6 +10,10 @@ import ohos.concurrency.*
 public class ComWheel {
     @State
     var model: ComMaterialModel = ComMaterialModel()
+
+    protected override func aboutToDisappear() {
+        this.model.closeTimer()
+    }
 
     func build() {
         Column {
@@ -87,7 +91,7 @@ public class ComMaterialModel {
     @Publish
     var rimSvgPath: String = ""
     // 是否是动态进度轮
-    var isSpinning: Bool = true
+    var isSpinning: Bool = false
     // 是否是线性进度轮
     var linearProgress: Bool = false
     //圆弧处在最大或者最小角度时，保持当时状态的时间，简而言之，当圆弧为的角度为 barLength
@@ -225,7 +229,7 @@ public class ComMaterialModel {
                 this.startX = this.circleRadius + (this.radius * sin(start))
                 this.startY = this.circleRadius - (this.radius * cos(start))
                 // 偏移的角度
-                let Offset = (1.0 - pow(1.0 - this.progress / 360.0, factor)) * 360.0
+                let Offset = (1.0 - pow(1.0 - this.progress / 360.0, 1)) * 360.0
                 this.targetAngle = startAngle + Offset
                 if (Offset < 180.0) {
                     this.angleFlag = 0

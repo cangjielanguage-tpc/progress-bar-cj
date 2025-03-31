@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 import ohos.base.*
 import ohos.component.*
@@ -50,11 +50,29 @@ public class MaterialModel {
     var strokeWidth: Float64 = 8.0
     var isPocket: Bool = false
     var colors: Array<UInt32> = [0x3E802F, 0xF4B400, 0x427FED, 0xB23424]
-    var speed: Float64 = 0.0
+    var speed: Float64 = 1.5
     var separatorLength: Float64 = 0.0
-    var sectionsCount: Int64 = 0
+    var sectionsCount: Int64 = 4
     var curve: Curve = Curve.Linear
+    var progressInit: Float64 = 0.0
 
+    var horizontalLength: Float64 = 1000.0
+
+    public func setHorizontalLength(horizontalLength: Float64): Unit {
+        this.horizontalLength = horizontalLength
+    }
+
+    func getHorizontalLength(): Float64 {
+        return this.horizontalLength
+    }
+
+    public func setProgressInit(progressInit: Float64): Unit {
+        this.progressInit = progressInit
+    }
+
+    func getProgressInit(): Float64 {
+        return this.progressInit
+    }
     public func setSecondColor(secondColor: Int64): Unit {
         this.secondColor = secondColor
     }

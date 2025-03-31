@@ -1,7 +1,7 @@
 /*
  * Copyright (c) Huawei Technologies Co., Ltd. 2024-2024. All rights reserved.
  */
-package material
+package progressbar
 
 import ohos.base.*
 import ohos.component.*
@@ -28,6 +28,10 @@ public class SmoothHorizontalProgressBar {
 
     protected override func aboutToAppear() {
         this.mHeight = this.modelBuild.strokeWidth
+        if (this.modelBuild.colors.size != 0) {
+        	this.colors = this.modelBuild.colors
+        }
+
     }
 
     @Builder
@@ -41,7 +45,7 @@ public class SmoothHorizontalProgressBar {
             reversed: this.modelBuild.isReversed,
             isStop: this.modelBuild.isStop,
             curve: this.modelBuild.curve,
-            colors: this.modelBuild.colors,
+            colors: this.colors,
             isPocket: this.modelBuild.isPocket,
             isGradients: this.modelBuild.isGradients,
         )
@@ -57,7 +61,7 @@ public class SmoothHorizontalProgressBar {
             speed: this.modelBuild.speed,
             reversed: this.modelBuild.isReversed,
             curve: this.modelBuild.curve,
-            colors: this.modelBuild.colors,
+            colors: this.colors,
             isPocket: this.modelBuild.isPocket,
             isGradients: this.modelBuild.isGradients,
         )
@@ -70,7 +74,7 @@ public class SmoothHorizontalProgressBar {
             speed: this.modelBuild.speed,
             reversed: !this.modelBuild.isReversed,
             curve: this.modelBuild.curve,
-            colors: this.modelBuild.colors,
+            colors: this.colors,
             isPocket: this.modelBuild.isPocket,
             isGradients: this.modelBuild.isGradients,
         )
@@ -87,7 +91,7 @@ public class SmoothHorizontalProgressBar {
                     speed: this.modelBuild.speed,
                     reversed: this.modelBuild.isReversed,
                     curve: this.modelBuild.curve,
-                    colors: this.modelBuild.colors,
+                    colors: this.colors,
                     isPocket: this.modelBuild.isPocket,
                     isGradients: this.modelBuild.isGradients,
                 )
@@ -100,7 +104,7 @@ public class SmoothHorizontalProgressBar {
                     speed: this.modelBuild.speed,
                     reversed: !this.modelBuild.isReversed,
                     curve: this.modelBuild.curve,
-                    colors: this.modelBuild.colors,
+                    colors: this.colors,
                     isPocket: this.modelBuild.isPocket,
                     isGradients: this.modelBuild.isGradients,
                 )
@@ -114,7 +118,7 @@ public class SmoothHorizontalProgressBar {
                     reversed: this.modelBuild.isReversed,
                     isStop: this.modelBuild.isStop,
                     curve: this.modelBuild.curve,
-                    colors: this.modelBuild.colors,
+                    colors: this.colors,
                     isPocket: this.modelBuild.isPocket,
                     isGradients: this.modelBuild.isGradients,
                 )

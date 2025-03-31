@@ -1,6 +1,6 @@
 {
   "module": {
-    "name": "material",
+    "name": "progressbar",
     "type": "har",
     "deviceTypes": [
       "default"

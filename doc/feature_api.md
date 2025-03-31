@@ -1,8 +1,8 @@
-# materialProgressBar4cj 特性文档
+# progress-bar-cj 特性文档
 
 ## 介绍
 
-materialProgressBar4cj 是一个自定义ProgressBar效果，包含进度轮和水平柱两种效果。它是一个用仓颉语言编写的适用于鸿蒙系统的三方库。
+progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平柱两种效果。它是一个用仓颉语言编写的适用于鸿蒙系统的三方库。
 
 ## 1 进度条基础信息类
 
