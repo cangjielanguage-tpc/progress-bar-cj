@@ -1,0 +1,11 @@
+[
+    {
+        "Name": " MaterialProgressBar ",
+        "License": " Apache License 2.0 ",
+        "License File": " LICENSE ",
+        "Owner": ""
+        "Upstream URL": " https://github.com/zhanghai/MaterialProgressBar ",
+        "Version Number": " V1.6.1 ",
+        "Description": " A small Android library allowing you to have a smooth and customizable horizontal or circular indeterminate ProgressBar "
+    }
+]
