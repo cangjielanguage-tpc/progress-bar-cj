@@ -5,7 +5,8 @@
       {
         "name": "default",
         "signingConfig": "default",
-        "compatibleSdkVersion": "5.0.3(15)",
+        "targetSdkVersion": "5.1.1(19)",
+        "compatibleSdkVersion": "5.1.1(19)",
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {
@@ -36,9 +37,10 @@
           ]
         }
       ]
-    },    {
-      "name": "progressbar",
-      "srcPath": "./progressbar"
+    },
+    {
+      "name": "progressBar",
+      "srcPath": "./progressBar"
     }
   ]
 }
