@@ -30,16 +30,16 @@ class EntryView {
                 Button("HLT_L0").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"Index_L0")})
                 Button("HLT_L1").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"Index_L1")})
 
-                Button("DeterminateCircularSample").fontSize(14).onClick {
+                Button("DeterminateCircularSample").fontSize(14).id("DeterminateCircularBar").onClick {
                     => Router.push(url: "DeterminateCircularSample")
                 }
-                Button("MaterialProgressBarSample").fontSize(14).onClick {
+                Button("MaterialProgressBarSample").fontSize(14).id("MaterialProgressBar").onClick {
                     => Router.push(url: "MaterialProgressBarSample")
                 }
-                Button("ModelInitPage").fontSize(14).onClick {
+                Button("ModelInitPage").fontSize(14).id("ModelInitBar").onClick {
                     => Router.push(url: "ModelInitPage")
                 }
-                Button("SmoothProgressBarSample").fontSize(14).onClick {
+                Button("SmoothProgressBarSample").fontSize(14).id("SmoothProgressBar").onClick {
                     => Router.push(url: "SmoothProgressBarSample")
                 }
             }.width(100.percent)

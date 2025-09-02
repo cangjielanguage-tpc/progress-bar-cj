@@ -15,6 +15,9 @@
   [dependencies.ohos_app_cangjie_entry]
     path = "../../../"
     version = "1.0.0"
+  [dependencies.progressBar]
+    path = "${progressbar}"
+
 
 [profile]
   [profile.build]
