@@ -41,6 +41,11 @@ class L1_test_material_03 {
             Flex(
                 FlexParams(direction: FlexDirection.Column, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start
             )) {
+
+                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                 Text('Circular').fontColor(0xB5B5B5).fontSize(15)
                 Row() {
                     MaterialProgressBar(style: MaterialProgressStyle.SmoothCircular, modelBuild: this.frameworkModel1)

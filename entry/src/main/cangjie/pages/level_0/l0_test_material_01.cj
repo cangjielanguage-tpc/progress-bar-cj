@@ -52,6 +52,10 @@ class L0_test_material_01 {
     func build() {
         Column {
             Flex(FlexParams(direction: FlexDirection.Column)) {
+                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                 Text("Normal Style").fontSize(18).margin(top: 5, bottom: 5)
                 Flex(
                     FlexParams(direction: FlexDirection.Row, alignItems: ItemAlign.Center,

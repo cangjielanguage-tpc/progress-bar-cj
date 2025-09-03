@@ -23,6 +23,10 @@ class L0_test_material_03 {
     func build() {
         Column() {
             Row() {
+                                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                 ComWheel(model: this.model)
             }
         }

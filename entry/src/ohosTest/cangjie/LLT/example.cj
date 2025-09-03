@@ -10,3 +10,17 @@ public let arr_HLT_new: Array<String> = [
         "Case04",
         "Case05"
     ]
+
+    let arr_L0 = [
+            "L0_test_material_01",
+            "L0_test_material_02",
+            "L0_test_material_03",
+            "L0_test_material_04"
+        ]
+
+    let arr_L1 = [
+            "L1_test_material_01",
+            "L1_test_material_02",
+            "L1_test_material_03",
+            "L1_test_material_04"
+        ]

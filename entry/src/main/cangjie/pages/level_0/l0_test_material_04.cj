@@ -88,7 +88,10 @@ class L0_test_material_04 {
             Flex(
                 FlexParams(direction: FlexDirection.Column, alignItems: ItemAlign.Start, justifyContent: FlexAlign.Start
             )) {
-
+                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                 //进度条们
                 Text('Normal indeterminate drawable').fontColor(0xB5B5B5).fontSize(15)
                 Row() {

@@ -103,6 +103,11 @@ class L0_test_material_02 {
     func build() {
         Column {
             Flex(FlexParams(direction: FlexDirection.Column)) {
+
+                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                 Text("Determinate Horizontal ProgressBar").fontSize(18).margin(2)
                 Text("Framework Implementation").fontSize(14).fontColor(0x666666).margin(2)
 

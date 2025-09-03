@@ -23,6 +23,11 @@ class Index_L0 {
     func build() {
             Scroll(Scroller()){
                 Column {
+
+           Text("-- Index_L0 back --").id("Index_L0_back").height(80)
+                .onClick ({ evt =>
+                    Router.back()
+                })
                     Text("-- material-L0-用例 --").height(80)
                     Divider().color(0x000000).strokeWidth(1).margin(top: 10, bottom: 10)
 

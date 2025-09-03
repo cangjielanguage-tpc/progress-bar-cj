@@ -90,6 +90,11 @@ class L1_test_material_02 {
     func build() {
         Column {
             Flex(FlexParams(direction: FlexDirection.Column)) {
+
+                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                 Text("设置 Progress 30").fontSize(14).fontColor(0x666666).margin(2)
 
                 Flex(FlexParams(direction: FlexDirection.Column)) {

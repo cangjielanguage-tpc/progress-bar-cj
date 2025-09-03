@@ -42,7 +42,32 @@ class TestExample {
         driver.findComponent(On().id("HLT_new_back")).click()
         driver.delayMs(1500)
 
+        driver.findComponent(On().id("HLT_L0")).click()
+        driver.delayMs(1500)
 
+        for(item in arr_HLT_new) {
+            driver.findComponent(On().id("${item}")).click()
+            driver.delayMs(1500)
+
+            driver.findComponent(On().id("back")).click()
+            driver.delayMs(1500)
+        }
+        driver.findComponent(On().id("Index_L0_back")).click()
+        driver.delayMs(1500)
+
+
+        driver.findComponent(On().id("HLT_L1")).click()
+        driver.delayMs(1500)
+
+        for(item in arr_HLT_new) {
+            driver.findComponent(On().id("${item}")).click()
+            driver.delayMs(1500)
+
+            driver.findComponent(On().id("back")).click()
+            driver.delayMs(1500)
+        }
+        driver.findComponent(On().id("Index_L1_back")).click()
+        driver.delayMs(1500)
 
     }
 }
