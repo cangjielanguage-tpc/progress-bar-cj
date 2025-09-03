@@ -61,6 +61,11 @@ class Case05 {
                 Flex(
                     FlexParams(direction: FlexDirection.Column, alignItems: ItemAlign.Start,
                         justifyContent: FlexAlign.Start)) {
+
+                            Text("back").id("back").height(80)
+                                .onClick ({ evt =>
+                                    Router.back()
+                                })
                     Text('正常').fontColor(0xB5B5B5).fontSize(15)
                     Row() {
                         ComWheel(model: this.model9)

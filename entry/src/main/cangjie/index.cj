@@ -26,9 +26,9 @@ class EntryView {
     func build() {
         Row {
             Column {
-                Button("HLT_new").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"InitTest")})
-                Button("HLT_L0").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"Index_L0")})
-                Button("HLT_L1").width(100.percent).height(50).fontSize(18).margin(top: 10).onClick({evt =>Router.push(url:"Index_L1")})
+                Button("HLT_new").width(100.percent).height(50).fontSize(18).margin(top: 10).id("HLT_new").onClick({evt =>Router.push(url:"InitTest")})
+                Button("HLT_L0").width(100.percent).height(50).fontSize(18).margin(top: 10).id("HLT_L0").onClick({evt =>Router.push(url:"Index_L0")})
+                Button("HLT_L1").width(100.percent).height(50).fontSize(18).margin(top: 10).id("HLT_L1").onClick({evt =>Router.push(url:"Index_L1")})
 
                 Button("DeterminateCircularSample").fontSize(14).id("DeterminateCircularBar").onClick {
                     => Router.push(url: "DeterminateCircularSample")

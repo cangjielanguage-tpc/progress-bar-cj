@@ -23,6 +23,10 @@ class ModelInitPage {
     func build() {
         Column() {
             Row() {
+                Text("back").id("back").height(80)
+                .onClick ({ evt =>
+                    Router.back()
+                })
                 ComWheel(model: this.model)
             }
         }

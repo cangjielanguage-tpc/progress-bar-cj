@@ -1,37 +1,48 @@
 package ohos_app_cangjie_entry_test.LLT
 
-import std.unittest.TestClass
-import std.unittest.TestPackage
-import std.unittest.TestSuite
-import std.unittest.UnitTestCase
-import std.unittest.common.Configuration
-import std.unittest.testmacro.Test
-import std.unittest.testmacro.TestCase
-import progressBar.*
-import ohos.ui_test.Driver
-import ohos.ui_test.On
-
+import std.unittest.*
+import std.unittest.common.*
+import std.unittest.testmacro.*
+import ohos.ui_test.*
 @Test
-class TestExample00 {
+class TestExample {
     @TestCase
-    func test00(): Unit {
+    func testLevel0(): Unit {
         let driver = Driver.create()
-        try {
-            let componentButton1 = driver.findComponent(On().id("DeterminateCircularBar"))
-            componentButton1.click()
-            driver.delayMs(1000)
-            let componentButton2 = driver.findComponent(On().id("MaterialProgressBar"))
-            componentButton2.click()
-            driver.delayMs(1000)
-            let componentButton3 = driver.findComponent(On().id("ModelInitBar"))
-            componentButton3.click()
-            driver.delayMs(1000)
-            let componentButton4 = driver.findComponent(On().id("SmoothProgressBar"))
-            componentButton4.click()
-            driver.delayMs(1000)
+        driver.findComponent(On().id("DeterminateCircularBar")).click()
+        driver.delayMs(1500)
+        driver.findComponent(On().id("back")).click()
+        driver.delayMs(1500)
 
-        }catch (e: Exception) {
+        driver.findComponent(On().id("MaterialProgressBar")).click()
+        driver.delayMs(1500)
+        driver.findComponent(On().id("back")).click()
+        driver.delayMs(1500)
 
+        driver.findComponent(On().id("ModelInitBar")).click()
+        driver.delayMs(1500)
+        driver.findComponent(On().id("back")).click()
+        driver.delayMs(1500)
+
+        driver.findComponent(On().id("SmoothProgressBar")).click()
+        driver.delayMs(1500)
+        driver.findComponent(On().id("back")).click()
+        driver.delayMs(1500)
+
+        driver.findComponent(On().id("HLT_new")).click()
+        driver.delayMs(1500)
+
+        for(item in arr_HLT_new) {
+            driver.findComponent(On().id("${item}")).click()
+            driver.delayMs(1500)
+
+            driver.findComponent(On().id("back")).click()
+            driver.delayMs(1500)
         }
+        driver.findComponent(On().id("HLT_new_back")).click()
+        driver.delayMs(1500)
+
+
+
     }
 }

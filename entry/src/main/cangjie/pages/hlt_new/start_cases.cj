@@ -19,6 +19,10 @@ class InitTest {
     private var cases:Array<Array<String>>=getRunCases()
     func build() {
          Column {
+           Text("-- InitTest back --").id("HLT_new_back").height(80)
+                .onClick ({ evt =>
+                    Router.back()
+                })
             Text("测试主页面")
                 // 宽度
                 .width(100.percent)
@@ -46,7 +50,7 @@ class InitTest {
                                 Button("${idx}_${item[1]}")
                                  .height(50)
                                  .fontColor(Color.BLACK)
-                                 .width(100.percent)
+                                 .width(100.percent).id(item[1])
                                  .onClick{Router.push(url: item[2])}
                         }
                     )
