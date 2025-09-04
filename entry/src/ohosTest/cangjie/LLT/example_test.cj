@@ -45,7 +45,7 @@ class TestExample {
         driver.findComponent(On().id("HLT_L0")).click()
         driver.delayMs(1500)
 
-        for(item in arr_HLT_new) {
+        for(item in arr_L0) {
             driver.findComponent(On().id("${item}")).click()
             driver.delayMs(1500)
 
@@ -59,7 +59,7 @@ class TestExample {
         driver.findComponent(On().id("HLT_L1")).click()
         driver.delayMs(1500)
 
-        for(item in arr_HLT_new) {
+        for(item in arr_L1) {
             driver.findComponent(On().id("${item}")).click()
             driver.delayMs(1500)
 
