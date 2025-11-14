@@ -3,9 +3,9 @@
 </div>
 
 <p align="center">
-<img alt="" src="https://img.shields.io/badge/release-v0.0.1-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/release-v1.0.0-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/build-pass-brightgreen" style="display: inline-block;" />
-<img alt="" src="https://img.shields.io/badge/cjc-v0.53.18-brightgreen" style="display: inline-block;" />
+<img alt="" src="https://img.shields.io/badge/cjc-v1.0.3-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/cjcov-NA-brightgreen" style="display: inline-block;" />
 <img alt="" src="https://img.shields.io/badge/project-open-brightgreen" style="display: inline-block;" />
 </p>
@@ -46,54 +46,46 @@ progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平�
 
 ## 使用说明
 
-1. 通过 module 引入
-    1. 克隆下载项目
-    2. 将 progressbar 模块拷贝到应用项目下
-    3. 修改自身应用 entry 下的 oh-package.json5 文件，在 dependencies 字段添加 "progressbar": "file:../progressbar"
-    ```json
-      {
-         "name": "entry",
-         "version": "1.0.0",
-         "description": "Please describe the basic information.",
-         "main": "",
-         "author": "",
-         "license": "",
-        "dependencies": {
-            "progressbar": "file:../progressbar"
-        }
-      }
-    ```
-    4. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，在 [dependencies] 字段下添加 progressbar = {path = "../../../../progressbar/src/main/cangjie", version = "1.0.0"}
-    ```toml
-       [dependencies]
-           [dependencies.progressbar]
-               path = "../../../../progressbar/src/main/cangjie"
-               version = "1.0.0"
-    ```
-    5. 在项目中使用 import progressbar.* 引用 progressbar 项目
-    ```cangjie
-       import progressbar.*
-    ```
-2. 把 progress-bar-cj 作为三方库依赖引入
-    1. 目标工程把 progress-bar-cj 依赖库作为 git submodule 引入
 
-    ```
-       > cd $工程根目录
-       > mkdir third-party
-       > cd third-party
-       > git submodule add "https://gitcode.com/Cangjie-TPC/progress-bar-cj.git"
-    ```
-    2. 修改自身应用 entry/src/main/cangjie 下的 cjpm.toml 文件，添加依赖
-    ```toml
-    [dependencies]
-        [dependencies.progressbar]
-            path = "../../../../third-party/progress-bar-cj/progressbar/src/main/cangjie"
-            version = "1.0.0"
-    ```
-    3. 在项目中使用 progressbar 组件
-    ```cangjie
-       import progressbar.*
-    ```
+### 编译构建
+
+1. 源码编译
+
+```shell
+   1.下载源码 
+   git clone git@gitcode.com:Cangjie-TPC/progress-bar-cj.git
+   
+   2.引用源码
+   复制progressbar模块,粘贴到自身项目根级目录,并在cjpm.toml中添加依赖
+   
+    [dependencies.progressbar]
+       path = "../../../../progressbar/src/main/cangjie"
+       version = "1.0.0"
+      
+   3.使用源码
+   import progressbar.*
+   
+```
+
+2. har包编译
+
+```shell
+   1.下载源码 
+   git clone git@gitcode.com:Cangjie-TPC/progress-bar-cj.git
+   
+   2.har包编译
+   选中progressbar模块,点击 Build -> Make Module 'progressbar' 等待编译完成
+   
+   3.使用har包
+   获取har包 progressbar\build\default\outputs\default\progressbar.har 复制到自身项目/libs下,并在oh-package.json5中添加依赖
+     "dependencies": {
+       "progressbar": "file:./libs/progressbar.har"
+     }
+
+   4.使用源码
+   import progressbar.*
+   
+```
 
 ## 功能示例
 
@@ -146,9 +138,9 @@ class MaterialProgressBarSample {
 ## 约束与限制
 在下述版本验证通过：
 
-    DevEco Studio (5.0.9.100)
-    Cangjie Support Plugin 5.0.9.100
-    Cangjie Compiler: 0.53.18
+    DevEco Studio 5.1.1 Release
+    Cangjie Support Plugin 5.1.1.840
+    Cangjie Compiler: 1.0.3 (cjnative)
 
 ## 开源协议
 

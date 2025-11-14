@@ -1,3 +1,7 @@
+### 1.0.0
+1. DevEco Studio 5.1.1 Release(5.1.1.840)
+
+
 ### 0.0.1
 1. 提供material风格的进度轮进展条。
 2. 提供material风格的水平柱进展条。
