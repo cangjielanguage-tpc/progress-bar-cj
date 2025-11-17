@@ -53,7 +53,7 @@ progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平�
 
 ```shell
    1.下载源码 
-   git clone git@gitcode.com:Cangjie-TPC/progress-bar-cj.git
+   git clone https://gitcode.com/Cangjie-TPC/progress-bar-cj.git
    
    2.引用源码
    复制progressbar模块,粘贴到自身项目根级目录,并在cjpm.toml中添加依赖
@@ -71,7 +71,7 @@ progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平�
 
 ```shell
    1.下载源码 
-   git clone git@gitcode.com:Cangjie-TPC/progress-bar-cj.git
+   git clone https://gitcode.com/Cangjie-TPC/progress-bar-cj.git
    
    2.har包编译
    选中progressbar模块,点击 Build -> Make Module 'progressbar' 等待编译完成
@@ -138,9 +138,7 @@ class MaterialProgressBarSample {
 ## 约束与限制
 在下述版本验证通过：
 
-    DevEco Studio 5.1.1 Release
     Cangjie Support Plugin 5.1.1.840
-    Cangjie Compiler: 1.0.3 (cjnative)
 
 ## 开源协议
 
