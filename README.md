@@ -59,8 +59,7 @@ progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平�
    复制progressbar模块,粘贴到自身项目根级目录,并在cjpm.toml中添加依赖
    
     [dependencies.progressbar]
-       path = "../../../../progressbar/src/main/cangjie"
-       version = "1.0.0"
+       path = "../progressbar"
       
    3.使用源码
    import progressbar.*
