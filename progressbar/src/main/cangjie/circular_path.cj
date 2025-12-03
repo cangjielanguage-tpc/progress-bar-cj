@@ -76,7 +76,7 @@ public class CircularPath <: ProgressBar {
         return this.pathCmd
     }
 
-    public func reset() {
+    public func reset(): Unit {
         this.isReset = true
     }
 

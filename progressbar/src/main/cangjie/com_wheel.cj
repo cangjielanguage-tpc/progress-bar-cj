@@ -109,7 +109,7 @@ public class ComMaterialModel {
     // 定时器
     var timer: ?Timer = Option<Timer>.None
 
-    public func init_data() {
+    public func init_data(): Unit {
         this.radius = this.circleRadius - this.barWidth
         this.startX = this.circleRadius
         this.startY = this.barWidth
@@ -402,7 +402,7 @@ public class ComMaterialModel {
         return this.isSpinning
     }
 
-    public func closeTimer() {
+    public func closeTimer(): Unit {
         if (let Some(tTimer) <- this.timer) {
             tTimer.cancel()
         }

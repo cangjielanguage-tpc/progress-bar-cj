@@ -297,7 +297,7 @@ public class MLine {
         return "{ (${this.start} , ${this.end}) ${this.color}}"
     }
 
-    public func setLength(length: Float64) {
+    public func setLength(length: Float64): Unit {
         this.length = length
     }
 
@@ -305,7 +305,7 @@ public class MLine {
         return this.length
     }
 
-    public func setSpace(space: Float64) {
+    public func setSpace(space: Float64): Unit {
         this.space = space
     }
 
@@ -313,7 +313,7 @@ public class MLine {
         return this.space
     }
 
-    public func setStart(start: Float64) {
+    public func setStart(start: Float64): Unit {
         this.start = start
     }
 
