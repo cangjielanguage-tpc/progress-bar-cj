@@ -4,6 +4,8 @@ import std.unittest.*
 import std.unittest.common.*
 import std.unittest.testmacro.*
 import ohos.ui_test.*
+import progressBar.*
+
 @Test
 class TestExample {
     @TestCase
