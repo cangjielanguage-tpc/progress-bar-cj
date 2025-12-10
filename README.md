@@ -34,8 +34,7 @@ progress-bar-cj 是一个自定义ProgressBar效果，包含进度轮和水平�
 ├─progressbar # progressbar 库源目录                  
 │  └─src
 │      └─main
-│          ├─cangjie
-│          │  └─src              # 核心实现功能代码                       
+│          ├─cangjie   # 核心实现功能代码
 │          └─resources
 ├─hvigor     # 构建工具目录
 ├─README.md  # progress-bar-cj 介绍及使用说明

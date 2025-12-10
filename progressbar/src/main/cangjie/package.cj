@@ -16,13 +16,11 @@ internal import ohos.ability.AbilityStage
 internal import ohos.ability.LaunchReason
 internal import ohos.prompt_action.*
 internal import std.sync.*
-internal import std.random.*
 internal import std.convert.*
 internal import std.math.*
 internal import std.sync.*
 internal import std.time.*
 internal import ohos.hilog.*
-internal import ohos.prompt_action.*
 internal import ohos.hilog.*
 internal import ohos.concurrency.*
 
