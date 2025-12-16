@@ -361,7 +361,6 @@ public class ComMaterialModel {
         return this.spinSpeed
     }
 
-    // Reset the count (in increment mode)
     public func resetCount(): Unit {
         this.progress = 0.0
         this.mTargetProgress = 0.0
