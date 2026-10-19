@@ -14,9 +14,5 @@
 **/*.cj.macrocall
 **/ability_mainability_entry.cj
 **/module_**_entry.cj
-.idea
-.cjpm-history
-target/
-oh-package-lock.json5
-code-linter.json5
-entry/src/main/cangjie/cjpm.lock
+**/IDL_Dependencies_List~
+**/build-script-cache
